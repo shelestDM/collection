@@ -1,0 +1,576 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Ubuntu:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Montserrat:wght@100;300&family=Ubuntu:wght@300&display=swap');
+
+*{ 
+    font-family: 'Montserrat', Montserrat, serif;
+}
+:root{
+    --black: rgb(37, 34, 34);
+    --orange:  rgb(226, 110, 68);
+    --font-color-white: rgb(230, 230, 230);
+    --font-color-black: rgb(37, 34, 34);
+
+
+    --test-font-color-black: rgb(0, 0, 0);
+    --test-color-white:rgb(255, 255, 255);
+    --test-color-grey: rgb(233, 233, 233);
+}
+
+body, html { 
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+}
+
+/* описание заголовка  */
+.header-wrap{
+    background-color: var(--test-color-white) ;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 800px;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+}
+
+@keyframes appear {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+.header-one{
+    color: var(--test-font-color);
+    margin-top: 30px;
+    margin-right: 5px;
+    
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+}
+.header-two{
+    color: var(--test-font-color);
+    margin-top: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-delay: 1.8s;
+}
+.header-three{
+    color: var(--test-font-color);
+    margin-top: 30px;
+  /*   margin-right: 5px; */
+
+    animation-name: appear;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-delay: 3.8s;
+}
+
+.visibility{
+    opacity: 0;
+}
+
+
+
+
+/* описание секции обо мне  */
+.about-me-section{
+    display: flex;
+    background-color: var(--test-color-white);
+    width: 50%;
+    margin-left: 50%;
+    position: relative;
+    top: 200px;  
+    margin-bottom: 200px;
+}
+
+.about-me-section-wrap{
+    margin: 25px;
+    text-align: right;
+}
+.about-me-head{
+    margin-right: 20px;
+    color: var(--test-font-color-black);
+}
+.about-me-discription{
+    color: var(--test-font-color-black);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+@keyframes propagation {
+    0%{
+        top: 200px;  
+    }
+    100%{
+      
+        top: 0px;  
+    }
+}
+
+.animation{   
+    animation-name: propagation;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+
+
+
+/* описание секции о сайте  */
+.about-site-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--test-color-white);
+}
+
+.discription-wrap{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    
+}
+
+.about-site-discription{
+    font-size: var(--forn-size-discription);
+    color: var(--test-font-color-black);
+    margin-right: 20px;
+    line-height: 1.5;
+    text-align: justify;
+    margin-left:45px;
+    margin-right:25px;
+}
+.about-site-head{
+    text-align: center;
+    margin: 25px;
+    color: var(--test-font-color-black);
+}
+
+
+
+/* описание секции о первом проекте  */
+.project-one-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--test-color-grey);
+}
+.project-one-wrap{
+    width: 70%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.project-one-head-wrap{
+    text-align: center;
+    margin: 25px;
+}
+.project-one-head{
+    margin: 25px ;
+}
+.project-one-discription-list-wrap,
+.project-one-link-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.project-one-discription{
+    text-align: justify;
+}
+.project-one-link{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--test-font-color-black);
+    padding: 15px;
+    margin: 45px;
+    transition: all 0.8s ease 0s;
+}
+.project-one-link:hover{
+    color: var(--test-font-color-black);
+    transform: scale(1.2);
+    text-decoration: underline;
+}
+.project-one-head,
+.project-one-discription,
+.project-one-discription-list,
+.project-one-link{
+    color: var(--test-font-color-black);
+    font-size: 24px;
+}
+.project-one-list-zero,
+.project-two-list-zero{
+    list-style-type: none;
+    margin-left: -25px;
+    font-style: italic;
+    font-size: 25px;
+    text-decoration: underline; 
+}
+
+.head-link-one{
+    text-decoration: none;
+    font-style: italic;
+    color: var(--test-font-color-black);
+}
+.head-link-one:hover{
+    color: rgb(0, 0, 0);
+}
+
+/* описание секции о втором проекте  */
+.project-two-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--test-color-white);
+}
+.project-two-wrap{
+    width: 70%;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.project-two-head-wrap{
+    text-align: center;
+}
+.project-two-discription-list-wrap,
+.project-two-link-wrap{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.project-two-discription{
+    text-align: justify;
+}
+.project-two-link{
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--test-font-color-black);
+    padding: 15px;
+    margin: 45px;
+    transition: all 0.8s ease 0s;
+}
+
+.project-two-link:hover{
+    color: var(--test-font-color-black);
+    transform: scale(1.2);
+    text-decoration: underline;
+    border-width: 1px 0 1px 0;
+}
+.project-two-head,
+.project-two-discription,
+.project-two-discription-list,
+.project-two-link{
+    color: var(--test-font-color-black);
+    font-size: 24px;
+}
+.project-two-head{
+    margin: 25px;
+}
+
+.head-two-link{
+    text-decoration: none;
+    font-style: italic;
+    color: var(--test-font-color-black);
+}
+.head-two-link:hover{
+    color: rgb(0, 0, 0);
+}
+
+
+/* описание секции футера  */
+.footer-section{
+    background-color: var(--test-color-grey);
+    height: 150px;
+}
+
+.footer-info-discription{
+    color: var(--font-color-white);
+}
+.footer-link-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.telegram{
+    width: 45px;
+    height: 45px;
+}
+.phone,
+.mail{
+    width: 50px;
+    height: 50px;
+}
+
+.git{
+    width: 47px;
+    height: 47px;
+}
+.git{
+border-radius: 15px;
+}
+
+.telegram-link,
+.phone-link,
+.mail-link,
+.git-link{
+    margin-top: 45px;
+    margin-left: 15px;
+    margin-right: 15px;
+    transition: all 0.5s ease 0s;
+}
+
+.telegram-link:hover,
+.phone-link:hover,
+.mail-link:hover,
+.git-link:hover  {
+    transform: rotate(-360deg);
+}
+
+
+/*анимации*/
+
+
+/* описание логики отзывчивого размера текста  */
+
+@media screen and (max-width: 576px) {
+    .header-one,
+    .header-two,
+    .header-three,
+    .about-me-head,
+    .about-site-head,
+    .project-one-head,
+    .project-two-head{
+        font-size: 25px;
+    }
+   .discription-wrap{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .about-me-discription,
+    .about-site-discription,
+    .project-one-discription,
+    .project-one-discription-list,
+    .project-one-link,
+    .project-two-link,
+    .project-two-discription,
+    .project-two-discription-list{
+        font-size: 14px;
+    }
+    .project-one-list-zero,
+    .project-two-list-zero{
+        font-size: 15px ;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+    .about-me-discription,
+    .about-me-head{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .header-two{
+        margin-left: 20px;
+    }
+    .project-one-link,
+    .project-two-link{
+        text-align: center;
+    }
+  }
+
+@media screen and (min-width: 577px) {
+    .header-one,
+    .header-two,
+    .header-three,
+    .about-me-head,
+    .about-site-head,
+    .project-one-head,
+    .project-two-head{
+        font-size: 28px;
+    }
+    .about-me-discription,
+    .about-site-discription,
+    .project-one-discription,
+    .project-one-discription-list,
+    .project-one-link,
+    .project-two-link,
+    .project-two-discription,
+    .project-two-discription-list{
+        font-size: 16px;
+    }
+    .discription-wrap{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .project-one-list-zero,
+    .project-two-list-zero{
+        font-size: 17px ;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+    .project-one-link,
+    .project-two-link{
+        text-align: center;
+    }
+  }
+
+
+@media screen and (min-width: 769px) {
+    .header-one,
+    .header-two,
+    .header-three,
+    .about-me-head,
+    .about-site-head,
+    .project-one-head,
+    .project-two-head{
+        font-size: 31px;
+    }
+    .about-me-discription,
+    .about-site-discription,
+    .project-one-discription,
+    .project-one-discription-list,
+    .project-one-link,
+    .project-two-link,
+    .project-two-discription,
+    .project-two-discription-list{
+        font-size: 18px;
+    }
+    .project-one-list-zero,
+    .project-two-list-zero{
+        font-size: 19px ;
+    }
+    .project-one-link,
+    .project-two-link{
+        text-align: center;
+    }
+  }
+
+@media screen and (min-width: 992px) {
+    .header-one,
+    .header-two,
+    .header-three,
+    .about-me-head,
+    .about-site-head,
+    .project-one-head,
+    .project-two-head{
+        font-size: 34px;
+    }
+    .about-me-discription,
+    .about-site-discription,
+    .project-one-discription,
+    .project-one-discription-list,
+    .project-one-link,
+    .project-two-link,
+    .project-two-discription,
+    .project-two-discription-list{
+        font-size: 20px;
+    }
+    .discription-wrap{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .project-one-list-zero,
+    .project-two-list-zero{
+        font-size: 21px ;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+    }
+    .project-one-link,
+    .project-two-link{
+        text-align: center;
+    }
+  }
+
+@media screen and (min-width: 1200px) {
+    .header-one,
+    .header-two,
+    .header-three,
+    .about-me-head,
+    .about-site-head,
+    .project-one-head,
+    .project-two-head{
+        font-size: 37px;
+    }
+    .about-me-discription,
+    .about-site-discription,
+    .project-one-discription,
+    .project-one-discription-list,
+    .project-one-link,
+    .project-two-link,
+    .project-two-discription,
+    .project-two-discription-list{
+        font-size: 22px;
+    }
+    .discription-wrap{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .project-one-list-zero,
+    .project-two-list-zero{
+        font-size: 23px ;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+    }
+  }
+ 
+@media screen and (min-width: 1400px) {
+    .header-one,
+    .header-two,
+    .header-three,
+    .about-me-head,
+    .about-site-head,
+    .project-one-head,
+    .project-two-head{
+        font-size: 40px;
+    }
+    .about-me-discription,
+    .about-site-discription,
+    .project-one-discription,
+    .project-one-discription-list,
+    .project-one-link,
+    .project-two-link,
+    .project-two-discription,
+    .project-two-discription-list{
+        font-size: 24px;
+    }
+    .discription-wrap{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+    .project-one-list-zero,
+    .project-two-list-zero{
+        font-size: 25px ;
+    }
+    .header{
+        display: flex;
+        flex-direction: row;
+    }
+  }
